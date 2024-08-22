@@ -1,15 +1,18 @@
-import React from 'react'
+import React from "react";
+import Navbar from "../component/Navbar/Navbar";
 
-export default function SiteLayOut({children}: {children: React.ReactNode}
-) {
+export default function SiteLayOut({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <>
-    <header>
+      <header>
+        <Navbar />
+      </header>
 
-    </header>
-
-        {children}
-        
+      {children}
     </>
-  )
+  );
 }
