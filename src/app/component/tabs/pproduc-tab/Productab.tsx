@@ -72,7 +72,7 @@ export default function Productab() {
   }, []);
 
   return (
-    <div className="flex overflow-x-auto px-[27px]">
+    <div className="flex overflow-x-auto px-[27px] bg-white">
      {
       productState?.map((item, i)=><ProducItemCard key={`product-img-${i}`} item={item}  />)
      }

@@ -3,14 +3,12 @@ import { Inter, Montserrat, Qwitcher_Grypen } from "next/font/google";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
-// const 
+// const
 
 const montserrat = Montserrat({
   subsets: ["latin"],
-  variable: "--font-monserrat"
-})
-
-
+  variable: "--font-monserrat",
+});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -24,7 +22,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${montserrat.variable} ${inter.className} `}>
-      <body className="">{children}</body>
+      <body className="bg-gradient-to-r from-blue-gray-50 to-white">
+        {children}
+      </body>
     </html>
   );
 }
