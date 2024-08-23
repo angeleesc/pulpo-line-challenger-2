@@ -6,7 +6,7 @@ import ShoppingCart from "../icons/ShoppingCart";
 
 export default function Navbar() {
   return (
-    <nav className="bg-primary w-full h-16 flex items-center px-4">
+    <nav className="bg-primary-default w-full h-16 flex items-center px-4">
       <div className="mx-4 m">
         <Logo />
       </div>

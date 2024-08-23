@@ -26,7 +26,7 @@ nav {
         @apply mx-4 text-[16px] font-medium;
 
         &:hover {
-            color: theme("colors.slate.300")
+            color: theme("colors.deep-orange.500")
         }
 
     }

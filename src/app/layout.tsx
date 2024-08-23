@@ -10,11 +10,6 @@ const montserrat = Montserrat({
   variable: "--font-monserrat"
 })
 
-const qwiter_grypen = Qwitcher_Grypen( {
-  subsets:["latin"],
-  weight: ["400","700"],
-  variable: "--font-qwiter-gryper"
-} );
 
 
 export const metadata: Metadata = {
@@ -28,7 +23,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${montserrat.variable} ${inter.className}  ${qwiter_grypen.variable}`}>
+    <html lang="en" className={`${montserrat.variable} ${inter.className} `}>
       <body className="">{children}</body>
     </html>
   );
