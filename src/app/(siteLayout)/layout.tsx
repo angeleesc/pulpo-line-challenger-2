@@ -1,5 +1,6 @@
 import React from "react";
 import Navbar from "../component/Navbar/Navbar";
+import Productab from "../component/tabs/pproduc-tab/Productab";
 
 export default function SiteLayOut({
   children,
@@ -8,8 +9,9 @@ export default function SiteLayOut({
 }) {
   return (
     <>
-      <header className="fixed top-0">
+      <header className="fixed w-full top-0">
         <Navbar />
+        <Productab />
       </header>
 
       {children}
