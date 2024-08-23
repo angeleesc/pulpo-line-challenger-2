@@ -22,8 +22,8 @@ export default function ProducItemCard({ item }: { item: ProductsTab }) {
         height={32}
         // layout={"responsive"}
       />
-      <p className="text-[18px]  font-sans text-purple-500" >{item.name}</p>
-      <p className="">{item.price}</p>
+      <p className="mt-1 block text-[13px] leading-[18px] font-montserrat font-medium" >{item.name}</p>
+      <p className="text-[13px] font-montserrat font-semibold ">{item.price}</p>
     </div>
   );
 }

@@ -16,7 +16,8 @@ const config: Config = {
 
       fontFamily:{
 
-        sans: ["Montserrat", "sans-serif"]
+        montserrat: ["var(--font-monserrat)",],
+        "qwiter-gryper": ["var(--font-qwiter-gryper)"]
 
       },
 

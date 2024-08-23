@@ -1,8 +1,21 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Montserrat, Qwitcher_Grypen } from "next/font/google";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
+// const 
+
+const montserrat = Montserrat({
+  subsets: ["latin"],
+  variable: "--font-monserrat"
+})
+
+const qwiter_grypen = Qwitcher_Grypen( {
+  subsets:["latin"],
+  weight: ["400","700"],
+  variable: "--font-qwiter-gryper"
+} );
+
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -15,7 +28,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className={`${montserrat.variable} ${inter.className}  ${qwiter_grypen.variable}`}>
       <body className="">{children}</body>
     </html>
   );
