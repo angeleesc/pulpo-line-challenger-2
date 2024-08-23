@@ -8,7 +8,7 @@ export default function SiteLayOut({
 }) {
   return (
     <>
-      <header>
+      <header className="fixed top-0">
         <Navbar />
       </header>
 
