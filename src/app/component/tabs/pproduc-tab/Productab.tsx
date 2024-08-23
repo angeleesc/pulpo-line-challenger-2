@@ -3,6 +3,7 @@
 import { ProductsTabType } from "@/types/producTabTypes";
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
+import ProducItemCard from "../../cards/product-tab-card/ProducItemCard";
 
 export default function Productab() {
   const [productState, setProductState] = useState<ProductsTabType>(null);
@@ -11,6 +12,31 @@ export default function Productab() {
 
   const getProduct = async () => {
     setProductState([
+      {
+        img: "/porductab-img-default.svg",
+        name: "Euromillones",
+        price: "17.000.000",
+      },
+      {
+        img: "/porductab-img-default.svg",
+        name: "Euromillones",
+        price: "17.000.000",
+      },
+      {
+        img: "/porductab-img-default.svg",
+        name: "Euromillones",
+        price: "17.000.000",
+      },
+      {
+        img: "/porductab-img-default.svg",
+        name: "Euromillones",
+        price: "17.000.000",
+      },
+      {
+        img: "/porductab-img-default.svg",
+        name: "Euromillones",
+        price: "17.000.000",
+      },
       {
         img: "/porductab-img-default.svg",
         name: "Euromillones",
@@ -27,7 +53,9 @@ export default function Productab() {
 
   return (
     <div className="flex overflow-x-auto">
-      <h3>Productab</h3>
+     {
+      productState?.map((item, i)=><ProducItemCard key={`product-img-${i}`} item={item}  />)
+     }
     </div>
   );
 }
