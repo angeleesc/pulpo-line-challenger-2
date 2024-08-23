@@ -1,12 +1,29 @@
-import { ProductsTab } from '@/types/producTabTypes'
-import Image from 'next/image'
-import React from 'react'
+import { ProductsTab } from "@/types/producTabTypes";
+import Image from "next/image";
+import React from "react";
 
-export default function ProducItemCard({ item  }:{ item: ProductsTab}) {
+export default function ProducItemCard({ item }: { item: ProductsTab }) {
   return (
-    <div>
-      {/* <Image src={item.img} alt='product-item' /> */}
-      items
+    <div
+      className={`
+    flex-grow min-w-[115px]
+    flex
+    flex-col items-center
+    mx-2
+    py-4
+
+    `}
+    >
+      <Image
+        src={item.img}
+        className="w-8"
+        alt="produc-image"
+        width={32}
+        height={32}
+        // layout={"responsive"}
+      />
+      <p className="text-[18px] text-red-500" >{item.name}</p>
+      <p>{item.price}</p>
     </div>
-  )
+  );
 }

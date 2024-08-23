@@ -42,6 +42,26 @@ export default function Productab() {
         name: "Euromillones",
         price: "17.000.000",
       },
+      {
+        img: "/porductab-img-default.svg",
+        name: "Euromillones",
+        price: "17.000.000",
+      },
+      {
+        img: "/porductab-img-default.svg",
+        name: "Euromillones",
+        price: "17.000.000",
+      },
+      {
+        img: "/porductab-img-default.svg",
+        name: "Euromillones",
+        price: "17.000.000",
+      },
+      {
+        img: "/porductab-img-default.svg",
+        name: "Euromillones",
+        price: "17.000.000",
+      },
     ]);
 
     return;
@@ -52,7 +72,7 @@ export default function Productab() {
   }, []);
 
   return (
-    <div className="flex overflow-x-auto">
+    <div className="flex overflow-x-auto px-[27px]">
      {
       productState?.map((item, i)=><ProducItemCard key={`product-img-${i}`} item={item}  />)
      }
