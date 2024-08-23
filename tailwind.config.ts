@@ -14,6 +14,12 @@ const config: Config = {
         primary: "#00A9E0"
       },
 
+      fontFamily:{
+
+        sans: ["Montserrat"]
+
+      },
+
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
