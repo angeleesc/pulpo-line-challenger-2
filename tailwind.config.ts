@@ -16,7 +16,7 @@ const config: Config = {
 
       fontFamily:{
 
-        sans: ["Montserrat"]
+        sans: ["Montserrat", "sans-serif"]
 
       },
 

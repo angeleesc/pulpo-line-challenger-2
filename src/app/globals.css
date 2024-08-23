@@ -6,13 +6,18 @@
 
 /* Montserrat */
 
-@layer base{
-    @font-face {
-        font-family: "Montserrat";
-        font-style: normal;
-        font-weight: 100;
-        src: url(/src/app/fonts/Montserrat-Thin.ttf);
-    }
+
+@font-face {
+    font-family: "Montserrat";
+    font-style : normal;
+    font-weight: 600;
+    src        : url("/public/fonts/Montserrat-Bold.ttf") format("ttf");
+}
+
+
+.monteserrat {
+    font-family: "Montserrat" !important;
+    color      : blue;
 }
 
 nav {
@@ -20,7 +25,7 @@ nav {
         color: theme("colors.white");
         @apply mx-4 text-[16px] font-medium;
 
-        &:hover{
+        &:hover {
             color: theme("colors.slate.300")
         }
 
