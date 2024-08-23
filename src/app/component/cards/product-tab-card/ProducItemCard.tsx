@@ -10,7 +10,7 @@ export default function ProducItemCard({ item }: { item: ProductsTab }) {
     flex
     flex-col items-center
     mx-2
-    py-4
+    py-2
 
     `}
     >

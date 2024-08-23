@@ -22,8 +22,8 @@ export default function SiteLayOut({
       />
       <div className="mt-[160px] w-full flex items-start">
         <div className="w-4/6">{children}</div>
-        <div className="w-2-6">
-          <h3>adie xd</h3>
+        <div className="w-2/6">
+          <AsideMenu />
         </div>
       </div>
     </>
