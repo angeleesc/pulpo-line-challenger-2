@@ -21,7 +21,7 @@ import Instagram from "../icons/logos/Instagram";
 export default function Footer() {
   return (
     <footer className="mt-8 bg-body-100 p-8 flex flex-wrap justify-between">
-      <div className="h-full flex-grow min-w-[200px] max-w-[320px]">
+      <div className="flex-shrink flex-grow flex items-center min-w-[200px] max-w-[320px]">
         <LogoDevTalenti />
       </div>
       <div className="flex-grow min-w-[200px] max-w-[320px]">
