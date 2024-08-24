@@ -1,6 +1,6 @@
 import React from "react";
 import MaterialButton from "../button/material-button/MaterialButton";
-import "./aside-menu.css";
+import "./aside-menu.scss";
 import AsideLink from "../links/aside-link/AsideLink";
 import Avatar from "../icons/Avatar";
 import Dollar from "../icons/Dollar";

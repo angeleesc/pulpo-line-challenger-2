@@ -2,7 +2,7 @@ import LinkTypeProps from '@/types/LinkTypes'
 import Link from 'next/link'
 import React from 'react'
 
-export default function FooterLin({children, ...rest}: LinkTypeProps) {
+export default function FooterLink({children, ...rest}: LinkTypeProps) {
 
     
 

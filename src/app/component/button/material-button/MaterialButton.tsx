@@ -1,6 +1,6 @@
 import { HtmlButtonInterface } from "@/types/HtmlButtonElementType";
 import React, { useMemo } from "react";
-import "./material/button.css"
+import "./material/button.scss"
 
 /* type Variant = "filled" | "outlined" | "gradient" | "text" */
 /* type Color = "primary" | "secondary"| "info"| "success"| "Warning"| "Error" | "Darck" */
