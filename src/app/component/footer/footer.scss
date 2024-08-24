@@ -1,9 +1,19 @@
 .footer-secctions{
 
+    h3,h4{
+       @apply text-white
+    }
+
     h3{
-        @apply text-[20px] font-bold text-white;
+        @apply text-[20px] font-bold ;
 
     }
+
+    h4{
+        @apply text-[15px] font-medium ;
+    }
+
+
 
     .footer-list {
       

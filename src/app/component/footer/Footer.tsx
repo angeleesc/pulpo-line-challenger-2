@@ -10,7 +10,7 @@ export default function Footer() {
         <LogoDevTalenti />
       </div>
       <div className="flex-grow min-w-[300px]">
-        <div className="footer-secctions">
+        <div className="footer-secctions mt-4">
           <h3>Link de interes</h3>
           <div className="flex">
             <ul className="flex-grow footer-list mr-2">
@@ -26,16 +26,23 @@ export default function Footer() {
           </div>
         </div>
         <div className="footer-secctions mt-4">
-            <h3>Otros Link</h3>
-            <ul className="footer-list">
-                <FooterLink href={"/"}>Compra Loteria De Navidad</FooterLink>
-                <FooterLink href={"/"}>Compra Loteria Del Niño</FooterLink>
-                <FooterLink href={"/"}>Compra Loteria</FooterLink>
-                <FooterLink href={"/"}>Compra Loteria</FooterLink>
-                <FooterLink href={"/"}>Compra Loteria</FooterLink>
-                <FooterLink href={"/"}>Compra Loteria</FooterLink>
-
-            </ul>
+          <h3>Otros Link</h3>
+          <ul className="footer-list">
+            <FooterLink href={"/"}>Compra Loteria De Navidad</FooterLink>
+            <FooterLink href={"/"}>Compra Loteria Del Niño</FooterLink>
+            <FooterLink href={"/"}>Loteria De Navidad</FooterLink>
+            <FooterLink href={"/"}>Bote XX Millones Euromillones</FooterLink>
+            <FooterLink href={"/"}>Loteria Sorteo Especial</FooterLink>
+            <FooterLink href={"/"}>Loteria Jueves y Sabado</FooterLink>
+          </ul>
+        </div>
+      </div>
+      <div className="flex-grow min-w-[300px]">
+        <div className="footer-secctions mt-4">
+            <h3>Confianza y Seguridad</h3>
+            <h4 className="mt-4">
+               Sellos de Confianza 
+            </h4>
         </div>
       </div>
     </footer>

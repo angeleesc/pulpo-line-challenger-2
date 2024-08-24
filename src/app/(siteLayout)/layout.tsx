@@ -18,7 +18,7 @@ export default function SiteLayOut({
       <img
         src={"/circle.svg"}
         alt="mani-bg"
-        className="fixed right-[-300px] w-[600px] h-[600px] top-0"
+        className="fixed z-[-10] right-[-300px] w-[600px] h-[600px] top-0"
       />
       <div className="mt-[160px] w-full flex items-start">
         <div className="w-4/6">{children}</div>
