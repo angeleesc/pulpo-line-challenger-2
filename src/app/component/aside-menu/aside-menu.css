@@ -1,5 +1,30 @@
 .aside-menu {
 
-    background-color: blue;
-    @apply p-3
+    /* background-color: blue; */
+    @apply p-3;
+
+    h3 {
+        @apply font-montserrat font-bold;
+        font-size: 14px;
+    }
+
+    .aside-link{
+        @apply font-montserrat font-medium flex items-center mx-4;
+        font-size: 15px;
+
+        &:first-child{
+            @apply mt-0;
+        }
+        
+    
+
+        svg{
+            stroke: theme("colors.body.100");
+            @apply mr-2;
+            path{
+                stroke: theme("colors.body.100");
+            }
+
+        }
+    }
 }

@@ -3,6 +3,9 @@ import React from "react";
 import MaterialButton from "../button/material-button/MaterialButton";
 import "./aside-menu.css";
 import AsideLink from "../links/aside-link/AsideLink";
+import User from "../icons/User";
+import ShoppingCart from "../icons/ShoppingCart";
+import Avatar from "../icons/Avatar";
 
 export default function AsideMenu() {
   return (
@@ -28,13 +31,14 @@ export default function AsideMenu() {
       </div>
 
       <div className="mt-4 w-full max-w-[330px] bg-white drop-shadow-md rounded-xl p-4">
-        <ul className={`aside-menu`}>
+        <div className={`aside-menu`}>
           <h3>Titulo de la seccion</h3>
-
-          <li>
-            <AsideLink href={"/login"}> login xd XD </AsideLink>
-          </li>
-        </ul>
+          <ul className="mt-4">
+            <AsideLink href={"/login"} icon={<Avatar />}>
+            Mis Datos Personales
+            </AsideLink>
+          </ul>
+        </div>
       </div>
     </aside>
   );
