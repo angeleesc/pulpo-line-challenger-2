@@ -9,13 +9,9 @@
     }
 
     .aside-link{
-        @apply font-montserrat font-medium flex items-center my-2;
+        @apply font-montserrat font-medium flex items-center ;
         font-size: 15px;
 
-        &:first-child{
-            @apply mt-0;
-        }
-        
     
 
         svg{
@@ -25,6 +21,18 @@
                 stroke: theme("colors.body.100");
             }
 
+        }
+
+        span{
+            @apply border-b border-b-transparent;
+        }
+
+        &:hover{
+            span{
+                /* background-color: red; */
+                @apply border-b-body-100
+            
+            }
         }
     }
 }

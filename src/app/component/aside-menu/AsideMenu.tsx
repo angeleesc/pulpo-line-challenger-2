@@ -29,11 +29,11 @@ export default function AsideMenu() {
           </div>
         </div>
         <div className="flex mt-6 w-full justify-between items-center ">
-          <MaterialButton variant="outlined" color="secondary">
+          <MaterialButton className="mr-2" variant="outlined" color="secondary">
             Recamar premio
           </MaterialButton>
-          <MaterialButton variant="filled" color="primary">
-            Recamar premio
+          <MaterialButton className="ml-2" variant="filled" color="primary">
+          Recargar Saldo
           </MaterialButton>
         </div>
       </div>

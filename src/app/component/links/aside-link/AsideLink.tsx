@@ -9,7 +9,7 @@ interface AsideLinkProps extends LinkProps{
 
 export default function AsideLink({ children, icon,  ...rest }: AsideLinkProps) {
   return (
-    <li className="block" >
+    <li className="flex h-[37px]" >
       <Link className="aside-link" {...rest}>
         {icon} <span>{children}</span>
       </Link>

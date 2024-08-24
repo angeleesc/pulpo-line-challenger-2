@@ -4,7 +4,7 @@
 
 
     transition: opacity .5s, color .5s, background-color .5s;
-    @apply p-2 text-[15px] font-montserrat font-semibold rounded text-center;
+    @apply p-2 w-full text-[13px] font-montserrat font-semibold rounded text-center;
 
 
     &.filled-primary{

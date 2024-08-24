@@ -17,25 +17,25 @@ export default function MaterialButton({
 
     const classConfig = useMemo(()=>{
         if(!variant && !color){
-            console.log("no tiene variable a color")
+            // console.log("no tiene variable a color")
              return " bg-orange-900 text-white"
         }
 
         if(variant && !color){
-             console.log("tienes variante pero no tienes color")
+            //  console.log("tienes variante pero no tienes color")
             if(variant ==="filled") return " bg-orange-900 text-white"
             if(variant ==="outlined") return "border bordeer-orange-900 text-orange-900"
         
         }
 
-        console.log("tienes variante y color")
+        // console.log("tienes variante y color")
         return `${variant}-${color}`
 
     },[])
    
 
   return <button 
-  className={`button ${classConfig}`}
+  className={`button ${classConfig} ${className || ""}`}
   {...rest}
   >{children}</button>;
 }
