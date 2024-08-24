@@ -1,10 +1,9 @@
-import Link, { LinkProps } from "next/link";
+import Link from "next/link";
 import React from "react";
 import LinkTypeProps from "@/types/LinkTypes";
 
-interface AsideLinkProps extends LinkProps{
+interface AsideLinkProps extends LinkTypeProps{
     icon: React.ReactNode
-    children: React.ReactNode
 }
 
 export default function AsideLink({ children, icon,  ...rest }: AsideLinkProps) {
