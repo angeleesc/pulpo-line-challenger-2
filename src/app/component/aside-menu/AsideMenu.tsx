@@ -1,5 +1,6 @@
 import Link from "next/link";
 import React from "react";
+import MaterialButton from "../button/material-button/MaterialButton";
 
 export default function AsideMenu() {
   return (
@@ -15,12 +16,9 @@ export default function AsideMenu() {
           </div>
         </div>
         <div className="flex mt-6 w-full justify-between items-center ">
-          <Link href={"/"} className=" text-[15px] font-montserrat font-semibold text-white rounded mr-1 p-2 w-1/2 text-center bg-primary-default" >
-            reclamar premio
-          </Link>
-          <Link href={"/"} className=" text-[15px] font-montserrat font-semibold text-white rounded ml-1 p-2 w-1/2 text-center bg-primary-default" >
-            Recargar saldo
-          </Link>
+          <MaterialButton variant="filled" >
+            Recamar premio
+          </MaterialButton>
         </div>
       </div>
     </aside>

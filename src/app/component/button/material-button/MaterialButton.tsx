@@ -1,5 +1,5 @@
 import { HtmlButtonInterface } from "@/types/HtmlButtonElementType";
-import React from "react";
+import React, { useMemo } from "react";
 import "./material/button.css"
 
 export default function MaterialButton({
@@ -12,10 +12,22 @@ export default function MaterialButton({
 }: HtmlButtonInterface) {
 
 
+    const classConfig = useMemo(()=>{
+        if(!variant && !color){
+             return " bg-orange-900 text-white"
+        }
 
+        if(variant && !color){
+             
+            if(variant ==="filled") return " bg-orange-900 text-white"
+            if(variant ==="outlined") return "border bordeer-orange-900 text-orange-900"
+        }
+
+    },[])
+   
 
   return <button 
-  className={`button`}
+  className={`button outline-darck`}
   {...rest}
   >{children}</button>;
 }

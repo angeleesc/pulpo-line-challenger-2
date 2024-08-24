@@ -1,6 +1,23 @@
-.button{
+.button {
 
 
-    
+    transition: opacity .5s, color .5s;
+
+
+
+    &.outline-darck {
+        @apply text-center bg-white p-2 rounded border border-secondary-default text-secondary-default;
+
+        &:hover {
+            @apply border-secondary-hover text-secondary-hover
+        }
+
+        &:disabled {
+            opacity: 50%;
+        }
+    }
+
+
+
 
 }
