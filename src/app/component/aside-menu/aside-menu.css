@@ -1,0 +1,5 @@
+.aside-menu {
+
+    background-color: blue;
+    @apply p-3
+}

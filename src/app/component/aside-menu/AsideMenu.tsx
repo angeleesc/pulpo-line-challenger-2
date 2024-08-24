@@ -1,6 +1,8 @@
 import Link from "next/link";
 import React from "react";
 import MaterialButton from "../button/material-button/MaterialButton";
+import "./aside-menu.css";
+import AsideLink from "../links/aside-link/AsideLink";
 
 export default function AsideMenu() {
   return (
@@ -16,13 +18,23 @@ export default function AsideMenu() {
           </div>
         </div>
         <div className="flex mt-6 w-full justify-between items-center ">
-          <MaterialButton variant="outlined" color="secondary" >
+          <MaterialButton variant="outlined" color="secondary">
             Recamar premio
           </MaterialButton>
-          <MaterialButton variant="filled" color="primary" >
+          <MaterialButton variant="filled" color="primary">
             Recamar premio
           </MaterialButton>
         </div>
+      </div>
+
+      <div className="mt-4 w-full max-w-[330px] bg-white drop-shadow-md rounded-xl p-4">
+        <ul className={`aside-menu`}>
+          <h3>Titulo de la seccion</h3>
+
+          <li>
+            <AsideLink href={"/login"}> login xd XD </AsideLink>
+          </li>
+        </ul>
       </div>
     </aside>
   );
