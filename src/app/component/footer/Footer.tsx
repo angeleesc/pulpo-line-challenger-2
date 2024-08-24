@@ -1,9 +1,12 @@
-import React from 'react'
+import React from "react";
+import LogoDevTalenti from "../icons/LogoDevTalenti";
 
 export default function Footer() {
   return (
-    <div className='mt-8'>
-        <h3>Footer XD</h3>
-    </div>
-  )
+    <footer className="mt-8 bg-body-100 p-4 flex flex-wrap">
+      <div className="h-full">
+        <LogoDevTalenti />
+      </div>
+    </footer>
+  );
 }
