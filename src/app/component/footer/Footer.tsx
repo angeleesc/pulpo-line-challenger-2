@@ -1,5 +1,5 @@
 import React from "react";
-import LogoDevTalenti from "../icons/LogoDevTalenti";
+import LogoDevTalenti from "../icons/logos/LogoDevTalenti";
 import FooterLink from "../links/footer-link/FooterLink";
 import "./footer.scss";
 
@@ -43,6 +43,10 @@ export default function Footer() {
             <h4 className="mt-4">
                Sellos de Confianza 
             </h4>
+            <ul className="footer-list">
+
+
+            </ul>
         </div>
       </div>
     </footer>

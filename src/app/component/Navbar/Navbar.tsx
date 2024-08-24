@@ -1,8 +1,8 @@
 import React from "react";
-import Logo from "../icons/Logo";
+import Logo from "../icons/logos/Logo";
 import Link from "next/link";
-import User from "../icons/User";
-import ShoppingCart from "../icons/ShoppingCart";
+import User from "../icons/UI-icons/User";
+import ShoppingCart from "../icons/UI-icons/ShoppingCart";
 
 export default function Navbar() {
   return (

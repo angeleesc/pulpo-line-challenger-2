@@ -2,18 +2,18 @@ import React from "react";
 import MaterialButton from "../button/material-button/MaterialButton";
 import "./aside-menu.scss";
 import AsideLink from "../links/aside-link/AsideLink";
-import Avatar from "../icons/Avatar";
-import Dollar from "../icons/Dollar";
-import Bell from "../icons/Bell";
-import Home from "../icons/Home";
-import BookMarkMinus from "../icons/BookMarkMinus";
-import RefreshLeft from "../icons/RefreshLeft";
-import Note from "../icons/Note";
-import Send from "../icons/Send";
-import PhoneCall from "../icons/PhoneCall";
-import CircleAlert from "../icons/CircleAlert";
-import Cart from "../icons/Cart";
-import Power from "../icons/Power";
+import Avatar from "../icons/UI-icons/Avatar";
+import Dollar from "../icons/UI-icons/Dollar";
+import Bell from "../icons/UI-icons/Bell";
+import Home from "../icons/UI-icons/Home";
+import BookMarkMinus from "../icons/UI-icons/BookMarkMinus";
+import RefreshLeft from "../icons/UI-icons/RefreshLeft";
+import Note from "../icons/UI-icons/Note";
+import Send from "../icons/UI-icons/Send";
+import PhoneCall from "../icons/UI-icons/PhoneCall";
+import CircleAlert from "../icons/UI-icons/CircleAlert";
+import Cart from "../icons/UI-icons/Cart";
+import Power from "../icons/UI-icons/Power";
 
 export default function AsideMenu() {
   return (
