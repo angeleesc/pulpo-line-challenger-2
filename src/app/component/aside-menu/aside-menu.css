@@ -25,6 +25,7 @@
 
         span{
             @apply border-b border-b-transparent;
+            line-height: 16px;
         }
 
         &:hover{

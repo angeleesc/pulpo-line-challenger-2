@@ -17,7 +17,7 @@ import Power from "../icons/Power";
 
 export default function AsideMenu() {
   return (
-    <aside className="  relative w-full mt-8 px-4 mb-4">
+    <aside className="relative w-full mt-8 mb-4">
       <div className="p-4 w-full max-w-[330px] drop-shadow-md bg-white rounded-xl">
         <div className="flex  justify-between items-center">
           <h2 className="text-base font-bold mx-1">{"Angel Sanchez"}</h2>
