@@ -1,22 +1,29 @@
-.footer-secctions{
+.footer-secctions {
 
-    h3,h4{
-       @apply text-white
+    h3,
+    h4 {
+        @apply text-white
     }
 
-    h3{
-        @apply text-[20px] font-bold ;
+    h3 {
+        @apply text-[20px] font-bold;
 
     }
 
-    h4{
-        @apply text-[15px] font-medium ;
+    h4 {
+        @apply text-[15px] font-medium;
+    }
+
+
+    p {
+        @apply text-[12.5px] text-white font-medium;
+        line-height: 18.5px;
     }
 
 
 
     .footer-list {
-      
+
 
         .footer-link {
             @apply text-white text-[12.5px] font-medium transition-colors underline;

@@ -111,15 +111,17 @@ export default function Footer() {
         </div>
         <div className="footer-secctions mt-4">
           <h3>Contacto</h3>
-          <FooterLink href={"/"}>hello@deltalenty.com</FooterLink>
-          <li>
-            <p>+506 124 356 789</p>
-          </li>
-          <FooterLink href={"/"}>Chat</FooterLink>
+          <ul className="footer-list w-full">
+            <FooterLink href={"/"}>hello@deltalenty.com</FooterLink>
+          </ul>
+          <p className="inline-block my-2">+506 124 356 789</p>
+          <ul className="footer-list w-full mb-2">
+            <FooterLink href={"/"}>Chat</FooterLink>
+          </ul>
           <p>De lunes a viernes de 9:00h a 19:00h</p>
-          <div className="flex">
+          <div className="flex items-center">
             <p>Siguenos en </p>{" "}
-            {/* <ul className="flex">
+            <ul className="flex">
               <FooterLogoLink href={"/"}>
                 <Facebook />
               </FooterLogoLink>
@@ -129,7 +131,7 @@ export default function Footer() {
               <FooterLogoLink href={"/"}>
                 <Twiter />
               </FooterLogoLink>
-            </ul> */}
+            </ul>
           </div>
         </div>
       </div>
