@@ -1,20 +1,52 @@
+/* type Variant = "filled" | "outlined" | "gradient" | "text" */
+/* type Color = "primary" | "secondary"| "info"| "success"| "Warning"| "Error" | "Darck" */
 .button {
 
 
-    transition: opacity .5s, color .5s;
+    transition: opacity .5s, color .5s, background-color .5s;
+    @apply p-2 text-[15px] font-montserrat font-semibold rounded text-center;
 
 
+    &.filled-primary{
+        @apply bg-primary-default border border-primary-default text-white;
 
-    &.outline-darck {
-        @apply text-center bg-white p-2 rounded border border-secondary-default text-secondary-default;
+        &:hover{
+            @apply bg-primary-hover border-primary-hover
+        }
+    }
+
+    &.outlined-primary {
+        @apply bg-white border border-primary-default text-primary-default;
 
         &:hover {
-            @apply border-secondary-hover text-secondary-hover
+            @apply bg-primary-hover border-primary-hover text-white
         }
 
-        &:disabled {
-            opacity: 50%;
+    }
+
+    &.outlined-secondary {
+
+        @apply bg-white border border-secondary-default text-secondary-default;
+
+        &:hover {
+            @apply bg-secondary-hover border-secondary-hover text-white;
         }
+
+
+    }
+
+
+    &.outlined-darck {
+        @apply bg-white border border-secondary-default text-secondary-default;
+
+        &:hover {
+            @apply bg-secondary-hover border-secondary-hover text-white;
+        }
+
+    }
+
+    &:disabled {
+        opacity: 50%;
     }
 
 

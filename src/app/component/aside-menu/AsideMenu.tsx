@@ -16,7 +16,10 @@ export default function AsideMenu() {
           </div>
         </div>
         <div className="flex mt-6 w-full justify-between items-center ">
-          <MaterialButton variant="filled" >
+          <MaterialButton variant="outlined" color="secondary" >
+            Recamar premio
+          </MaterialButton>
+          <MaterialButton variant="filled" color="primary" >
             Recamar premio
           </MaterialButton>
         </div>
