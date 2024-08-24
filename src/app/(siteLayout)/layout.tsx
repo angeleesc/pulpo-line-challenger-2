@@ -3,6 +3,7 @@ import Navbar from "../component/Navbar/Navbar";
 import Productab from "../component/tabs/pproduc-tab/Productab";
 import Image from "next/image";
 import AsideMenu from "../component/aside-menu/AsideMenu";
+import Footer from "../component/footer/Footer";
 
 export default function SiteLayOut({
   children,
@@ -26,6 +27,7 @@ export default function SiteLayOut({
           <AsideMenu />
         </div>
       </div>
+      <Footer />
     </>
   );
 }
