@@ -1,13 +1,19 @@
 import type { Metadata } from "next";
-import { Inter, Montserrat } from "next/font/google";
+import { Inter, Montserrat, Montserrat_Alternates } from "next/font/google";
 import "./globals.scss";
 
 const inter = Inter({ subsets: ["latin"] });
 // const
 
+// const montserrat = Montserrat_Alternates({
+//   subsets: ["latin"],
+//   variable: "--font-monserrat",
+//   weight:["100", "200", "300", "400","500", "600", "700", "800", "900"]
+// });
 const montserrat = Montserrat({
   subsets: ["latin"],
   variable: "--font-monserrat",
+  weight:["100", "200", "300", "400","500", "600", "700", "800", "900"]
 });
 
 export const metadata: Metadata = {
