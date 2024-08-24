@@ -9,7 +9,7 @@ export default function Footer() {
       <div className="h-full flex-grow min-w-[300px]">
         <LogoDevTalenti />
       </div>
-      <div className="flex-grow flex min-w-[300px]">
+      <div className="flex-grow min-w-[300px]">
         <div className="footer-secctions">
           <h3>Link de interes</h3>
           <div className="flex">
@@ -24,6 +24,18 @@ export default function Footer() {
               <FooterLink href={"/"}>Mapa Web</FooterLink>
             </ul>
           </div>
+        </div>
+        <div className="footer-secctions mt-4">
+            <h3>Otros Link</h3>
+            <ul className="footer-list">
+                <FooterLink href={"/"}>Compra Loteria De Navidad</FooterLink>
+                <FooterLink href={"/"}>Compra Loteria Del Niño</FooterLink>
+                <FooterLink href={"/"}>Compra Loteria</FooterLink>
+                <FooterLink href={"/"}>Compra Loteria</FooterLink>
+                <FooterLink href={"/"}>Compra Loteria</FooterLink>
+                <FooterLink href={"/"}>Compra Loteria</FooterLink>
+
+            </ul>
         </div>
       </div>
     </footer>
