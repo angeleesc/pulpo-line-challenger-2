@@ -9,7 +9,7 @@
     }
 
     .aside-link{
-        @apply font-montserrat font-medium flex items-center mx-4;
+        @apply font-montserrat font-medium flex items-center my-2;
         font-size: 15px;
 
         &:first-child{

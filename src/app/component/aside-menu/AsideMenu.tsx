@@ -6,6 +6,9 @@ import AsideLink from "../links/aside-link/AsideLink";
 import User from "../icons/User";
 import ShoppingCart from "../icons/ShoppingCart";
 import Avatar from "../icons/Avatar";
+import Dollar from "../icons/Dollar";
+import Bell from "../icons/Bell";
+import Home from "../icons/Home";
 
 export default function AsideMenu() {
   return (
@@ -36,6 +39,15 @@ export default function AsideMenu() {
           <ul className="mt-4">
             <AsideLink href={"/login"} icon={<Avatar />}>
             Mis Datos Personales
+            </AsideLink>
+            <AsideLink href={"/login"} icon={<Dollar />}>
+            Datos Bancarios
+            </AsideLink>
+            <AsideLink href={"/login"} icon={<Home />}>
+            Direciones
+            </AsideLink>
+            <AsideLink href={"/login"} icon={<Bell />}>
+            Mis Notificaciones
             </AsideLink>
           </ul>
         </div>
