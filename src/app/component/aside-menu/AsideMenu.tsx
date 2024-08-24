@@ -17,8 +17,9 @@ import Power from "../icons/Power";
 
 export default function AsideMenu() {
   return (
-    <aside className="relative w-full mt-8 mb-4">
-      <div className="p-4 w-full max-w-[330px] drop-shadow-md bg-white rounded-xl">
+    <aside className="relative mt-8 mb-4 mr-[60px] flex justify-end">
+     <div className="w-full max-w-[330px]">
+     <div className="p-4 w-full  drop-shadow-md bg-white rounded-xl">
         <div className="flex  justify-between items-center">
           <h2 className="text-base font-bold mx-1">{"Angel Sanchez"}</h2>
 
@@ -38,7 +39,7 @@ export default function AsideMenu() {
         </div>
       </div>
 
-      <div className="mt-4 w-full max-w-[330px] bg-white drop-shadow-md rounded-xl p-4 pb-0">
+      <div className="mt-4 w-full bg-white drop-shadow-md rounded-xl p-4 pb-0">
         <div className={`aside-menu`}>
           <h3>Titulo de la seccion</h3>
           <ul className="mt-4 ml-1">
@@ -96,6 +97,7 @@ export default function AsideMenu() {
         </div>
 
       </div>
+     </div>
     </aside>
   );
 }
