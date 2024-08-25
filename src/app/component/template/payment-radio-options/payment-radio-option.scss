@@ -1,0 +1,12 @@
+.payment-methos-container {
+
+   
+
+    .payment-option-item {
+        @apply bg-white shadow-sm;
+
+        &.payment-option-item-active{
+            background-color: blue;
+        }
+    }
+}
