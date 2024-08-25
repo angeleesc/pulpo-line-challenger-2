@@ -1,12 +1,22 @@
 .payment-methos-container {
 
-   
+
 
     .payment-option-item {
-        @apply bg-white shadow-sm;
+        @apply bg-white shadow-sm py-2 px-4 rounded-lg border border-white cursor-pointer;
 
-        &.payment-option-item-active{
-            background-color: blue;
+        input[type="radio"] {
+            display: none;
+        }
+
+        .payment-name-item{
+            // background-color: red;
+            @apply ml-2 font-medium text-[14px] leading-5
+        }
+
+        &.payment-option-item-active {
+            // background-color: blue;
+            @apply border-primary-default
         }
     }
 }
