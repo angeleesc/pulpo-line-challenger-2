@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import "./payment-radio-option.scss";
+import Help from "../../icons/UI-icons/Help";
 
 const CircleCheck = ({ active }: { active: boolean }) => {
   return (
@@ -32,7 +33,7 @@ const CheckItem = ({
   setValue,
   title,
   message,
-  icon
+  icon,
 }: {
   value: string;
   isChecked: boolean;
@@ -56,18 +57,16 @@ const CheckItem = ({
         onChange={(e) => setValue(e.target.value)}
       />
       <div className="flex items-center justify-between">
-      <div className="flex items-center">
-        <CircleCheck active={isChecked} />
-        <p className="payment-name-item">{title}</p>
-      </div>
-      {
-        message && <div>
-            <p className="payment-name-item-message">
-                {message}
-            </p>
+        <div className="flex items-center">
+          <CircleCheck active={isChecked} />
+          <p className="payment-name-item">{title}</p>
+          {icon && icon}
         </div>
-      }
-
+        {message && (
+          <div>
+            <p className="payment-name-item-message">{message}</p>
+          </div>
+        )}
       </div>
     </label>
   );
@@ -87,6 +86,7 @@ export default function PaymentRadionOption() {
         name={"payment-option"}
         setValue={setCurrenTpayment}
         message="Instántaneo"
+        icon={<Help />}
       />
 
       <CheckItem
@@ -96,6 +96,7 @@ export default function PaymentRadionOption() {
         name={"payment-option"}
         setValue={setCurrenTpayment}
         message="Importe mínimo 10€"
+        icon={<Help />}
       />
       <CheckItem
         title="Transferencia"
@@ -104,6 +105,7 @@ export default function PaymentRadionOption() {
         name={"payment-option"}
         setValue={setCurrenTpayment}
         message="No instántaneo"
+        icon={<Help />}
       />
     </div>
   );
