@@ -21,7 +21,7 @@ export default function ButtonGroupButton({
           type="button" 
           key={i} 
           className={`text-center flex-grow`}
-          onClick={() => setOption(option.value || "0")}
+          onClick={() => setOption(option.value || "")}
           >
             {option.title && option.title}
             {"  "} {option.icon && option.icon}
