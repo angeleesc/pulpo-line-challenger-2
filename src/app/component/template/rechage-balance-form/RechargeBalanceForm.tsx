@@ -51,11 +51,13 @@ export default function RechargeBalanceForm() {
         onChange={(e) => setBalanceState(e.target.value)}
         type="number"
       />
-      <ButtonGroupButton
-        currentOption={balanceState}
-        options={moneyValuesOptions}
-        setOption={setBalanceState}
-      />
+      <div className="mt-4">
+        <ButtonGroupButton
+          currentOption={balanceState}
+          options={moneyValuesOptions}
+          setOption={setBalanceState}
+        />
+      </div>
     </form>
   );
 }
