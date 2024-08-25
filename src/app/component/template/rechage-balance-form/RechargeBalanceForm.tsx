@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import TextInput from "../../inputs/text-input/TextInput";
 import { OptionsTabsType } from "@/types/tabOptions";
 import ButtonGroupButton from "../../inputs/button-group-input/ButtonGroupButton";
+import PaymentRadionOption from "../payment-radio-options/PaymentRadionOption";
 
 const moneyValuesOptions: OptionsTabsType[] = [
   {
@@ -58,6 +59,10 @@ export default function RechargeBalanceForm() {
           setOption={setBalanceState}
         />
       </div>
+
+      <h6 className="text-base font-bold mt-5 mb-5">Metodo de pago </h6>
+      <PaymentRadionOption/>
+
     </form>
   );
 }
