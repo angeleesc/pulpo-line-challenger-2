@@ -1,7 +1,7 @@
 "use client";
 import { OptionsTabsType } from "@/types/tabOptions";
 import React from "react";
-import "./tab-button.css";
+import "./tab-button.scss";
 
 type MenuTabOptionPropsType = {
   options: OptionsTabsType[];
