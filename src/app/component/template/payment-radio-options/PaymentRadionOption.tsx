@@ -12,7 +12,11 @@ export default function PaymentRadionOption() {
 
   return (
     <div className="flex flex-col gap-8 payment-methos-container">
-      <div className={`w-full`}>
+      <div
+        className={`w-full credit-card-zone ${
+          currenTpayment === "credit-card" && "credit-card-zone-active"
+        }`}
+      >
         <CheckItem
           title="Tarjeta de credito"
           isChecked={currenTpayment === "credit-card"}
@@ -23,7 +27,6 @@ export default function PaymentRadionOption() {
           icon={<Help />}
         />
       </div>
-      
 
       <CheckItem
         title="Bizun"

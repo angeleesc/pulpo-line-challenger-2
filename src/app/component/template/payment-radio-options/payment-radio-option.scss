@@ -1,5 +1,18 @@
 .payment-methos-container {
 
+    .credit-card-zone {
+
+        @apply border border-white rounded-lg shadow-sm;
+
+        .payment-option-item {
+            @apply border-none shadow-none;
+        }
+
+        &.credit-card-zone-active {
+
+            @apply border-primary-default;
+        }
+    }
 
 
     .payment-option-item {
@@ -9,12 +22,15 @@
             display: none;
         }
 
-        .payment-name-item{
+
+
+
+        .payment-name-item {
             // background-color: red;
-            @apply mx-2 font-medium text-[14px] leading-5 
+            @apply mx-2 font-medium text-[14px] leading-5
         }
 
-        .payment-name-item-message{
+        .payment-name-item-message {
             @apply font-medium text-[13px] leading-5 text-body-50
         }
 
