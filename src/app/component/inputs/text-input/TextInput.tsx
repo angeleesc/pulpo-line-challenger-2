@@ -32,29 +32,31 @@ export default function TextInput({
             w-full 
             h-full 
             bg-transparent 
-            text-blue-gray-700 
-            outline 
-            outline-0 
+            text-body-100 
             focus:outline-0 
+            font-montserrat
+            font-medium
             disabled:bg-blue-gray-50 
             disabled:border-0 
             transition-all 
             placeholder-shown:border
-            placeholder-shown:border-blue-gray-200
-            placeholder-shown:border-t-blue-gray-200
+            placeholder-shown:border-body-60
+            placeholder-shown:border-t-body-60
             border
             border-t-transparent
             focus:border-t-transparent
             text-sm
-            px-3 
-            py-2.5 
-            rounded-[7px] 
-            border-blue-gray-200 
-            focus:border-gray-900`}
+            px-4 
+            py-4 
+            rounded-[4px] 
+            border-body-60 
+            focus:border-body-100`}
           placeholder=" "
           {...rest}
         />
-        {placeholder && <label className={`
+        {placeholder && (
+          <label
+            className={`
         flex 
         w-full 
         h-full 
@@ -62,10 +64,11 @@ export default function TextInput({
         pointer-events-none 
         absolute 
         left-0 
-        font-normal 
+        font-medium 
+        font-montserrat
         !overflow-visible 
         truncate 
-        peer-placeholder-shown:text-blue-gray-500 
+        peer-placeholder-shown:text-body-60
         leading-tight 
         peer-focus:leading-tight 
         peer-disabled:text-transparent 
@@ -83,7 +86,7 @@ export default function TextInput({
         before:mt-[6.5px] 
         before:mr-1 
         peer-placeholder-shown:before:border-transparent 
-        before:rounded-tl-md before:border-t 
+        before:rounded-[4px]  before:border-t 
         peer-focus:before:border-t
         before:border-l 
         peer-focus:before:border-l
@@ -97,18 +100,22 @@ export default function TextInput({
         after:w-2.5 after:h-1.5 after:mt-[6.5px] 
         after:ml-1 
         peer-placeholder-shown:after:border-transparent 
-        after:rounded-tr-md 
+        after:rounded-[4px]
         after:border-t peer-focus:after:border-t
         after:border-r peer-focus:after:border-r
         after:pointer-events-none after:transition-all 
         peer-disabled:after:border-transparent 
         peer-placeholder-shown:leading-[3.75] 
         text-gray-500 peer-focus:text-gray-900 
-        before:border-blue-gray-200 
+        before:border-body-60 
         peer-focus:before:!border-gray-900 
-        after:border-blue-gray-200 peer-focus:after:!border-gray-900`}>{placeholder}</label>}
+        after:border-body-60 peer-focus:after:!border-gray-900`}
+          >
+            {placeholder}
+          </label>
+        )}
       </div>
-      {info && <p>{info}</p>}
+      {info && <p className="font-medium text-xs text-body-80 mt-1" >{info}</p>}
       {erroMessage && <p>{erroMessage}</p>}
     </label>
   );
