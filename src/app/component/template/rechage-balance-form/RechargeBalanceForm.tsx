@@ -45,8 +45,8 @@ export default function RechargeBalanceForm() {
 
   const [paymentDataState, setPaymentDataState] = useState<PaymentData>({
     amount: "",
-    paymentMehod: "",
-    creditCard: "",
+    paymentMehod: "credit-card",
+    creditCard: "Sabadell",
   });
 
   const checkIsAllDataOk = () => {
@@ -61,6 +61,9 @@ export default function RechargeBalanceForm() {
     if (!paymentDataState.creditCard) hasError.creditCard = true;
 
     console.log(Object.keys(hasError).length);
+
+    if (Object.keys(hasError).length === 0) setIsAllDataok(true);
+    else setIsAllDataok(false);
   };
 
   const updatedPaymentData = (name: string, value: string) => {
@@ -113,16 +116,16 @@ export default function RechargeBalanceForm() {
         <ButtonGroupButton
           currentOption={balanceState}
           options={moneyValuesOptions}
-          setOption={(data )=>{
-            console.log(data)
-            setBalanceState(data)
-            updatedPaymentData("amount", data)
+          setOption={(data) => {
+            console.log(data);
+            setBalanceState(data);
+            updatedPaymentData("amount", data);
           }}
         />
       </div>
 
       <h6 className="text-base font-bold mt-5 mb-5">Metodo de pago </h6>
-      <PaymentRadionOption />
+      <PaymentRadionOption updateData={updatedPaymentData} />
       <div className="flex mt-4">
         <div className="flex items-center">
           <p>
@@ -131,7 +134,12 @@ export default function RechargeBalanceForm() {
           </p>
         </div>
         <div className="w-full max-w-[220px]">
-          <button className="w-full text-center font-semibold font-montserrat text-white bg-primary-default rounded p-3 disabled:opacity-50 disabled:text-body-90" disabled={true}>Recargar Saldo</button>
+          <button
+            className="w-full text-center font-semibold font-montserrat text-white bg-primary-default rounded p-3 disabled:opacity-50 disabled:text-body-90"
+            disabled={!isAllDataok}
+          >
+            Recargar Saldo
+          </button>
         </div>
       </div>
     </form>

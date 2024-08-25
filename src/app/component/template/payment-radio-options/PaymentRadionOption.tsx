@@ -8,8 +8,12 @@ import { Select, Option } from "@material-tailwind/react";
 
 const cardsBrand = ["Visa", "mastercar", "maestro", "Sabadell"];
 
-export default function PaymentRadionOption() {
-  const [currenTpayment, setCurrenTpayment] = useState<string>("bizun");
+type PaymentRadionOptionProps ={
+  updateData: (name: string, value: string) => void
+}
+
+export default function PaymentRadionOption({updateData }:PaymentRadionOptionProps) {
+  const [currenTpayment, setCurrenTpayment] = useState<string>("credit-card");
   const [creditcardState, setcreditcardState] = useState<
     "default" | "other" | string
   >("default");
@@ -19,6 +23,17 @@ export default function PaymentRadionOption() {
   );
 
   const creditCardNumber = "0909";
+
+  const updateCurrenPaymenoption = (value: string)=>{
+    setCurrenTpayment(value)
+    updateData("paymentMehod", value)
+  }
+
+  const updateCreditCardBrad = (value: string)=>{
+    setcreditcardBrand(value)
+    updateData("creditCard", value)
+  }
+
 
   console.log("current state", currenTpayment);
 
@@ -34,7 +49,7 @@ export default function PaymentRadionOption() {
           isChecked={currenTpayment === "credit-card"}
           value={"credit-card"}
           name={"payment-option"}
-          setValue={setCurrenTpayment}
+          setValue={updateCurrenPaymenoption}
           message="Instántaneo"
           icon={<Help />}
         />
@@ -65,7 +80,7 @@ export default function PaymentRadionOption() {
             label="Elige TPV"
             className="custom-select"
             onChange={(val) => {
-              setcreditcardBrand(val);
+              if(val != undefined)updateCreditCardBrad( val);
             }}
             disabled={creditcardState !== "other"}
           >
@@ -85,7 +100,7 @@ export default function PaymentRadionOption() {
         isChecked={currenTpayment === "bizun"}
         value={"bizun"}
         name={"payment-option"}
-        setValue={setCurrenTpayment}
+        setValue={updateCurrenPaymenoption}
         message="Importe mínimo 10€"
         icon={<Help />}
       />
@@ -94,7 +109,7 @@ export default function PaymentRadionOption() {
         isChecked={currenTpayment === "transfer"}
         value={"transfer"}
         name={"payment-option"}
-        setValue={setCurrenTpayment}
+        setValue={updateCurrenPaymenoption}
         message="No instántaneo"
         icon={<Help />}
       />
