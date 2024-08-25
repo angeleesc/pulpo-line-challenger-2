@@ -24,7 +24,7 @@ export default function Home() {
   return (
     <main className="p-8">
       <div className="ml-16">
-        <h3 className="font-bold text-[25px]  mt-8">Gestion De Saldo</h3>
+        <h3 className="font-bold text-[25px] leading-9  mt-8 mb-6">Gestion De Saldo</h3>
         <MenuTabOption currentOption  = {tabOptionSelectesState}  setOption={setTabOptionSelectesState} options={recargaMenuOptions}  />
       </div>
     </main>

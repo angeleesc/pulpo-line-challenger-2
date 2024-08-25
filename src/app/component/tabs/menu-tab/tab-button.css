@@ -1,7 +1,7 @@
 .tab-button {
-    @apply text-[1rem] font-montserrat font-medium leading-6 p-3 border border-b-transparent text-center transition-colors ;
+    @apply text-[1rem] font-montserrat font-medium leading-6 py-3 px-4 border border-b-transparent text-center transition-colors ;
 
     &.tab-button-active{
-        background-color: red;
+        @apply border-b-primary-pressed
     }
 }
