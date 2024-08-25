@@ -11,12 +11,16 @@
 
         .payment-name-item{
             // background-color: red;
-            @apply ml-2 font-medium text-[14px] leading-5
+            @apply mx-2 font-medium text-[14px] leading-5 
+        }
+
+        .payment-name-item-message{
+            @apply font-medium text-[13px] leading-5 text-body-50
         }
 
         &.payment-option-item-active {
             // background-color: blue;
-            @apply border-primary-default
+            @apply border-primary-default;
         }
     }
 }

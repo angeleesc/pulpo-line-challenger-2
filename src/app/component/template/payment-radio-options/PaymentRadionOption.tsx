@@ -18,8 +18,58 @@ const CircleCheck = ({ active }: { active: boolean }) => {
         stroke="#1D1D1D"
         strokeWidth="1.026"
       ></circle>
-     { active && <circle cx="9.163" cy="8.519" r="4.105" fill="#1D1D1D"></circle>}
+      {active && (
+        <circle cx="9.163" cy="8.519" r="4.105" fill="#1D1D1D"></circle>
+      )}
     </svg>
+  );
+};
+
+const CheckItem = ({
+  value,
+  isChecked,
+  name,
+  setValue,
+  title,
+  message,
+  icon
+}: {
+  value: string;
+  isChecked: boolean;
+  setValue: (value: string) => void;
+  name: string;
+  title: string;
+  message?: string;
+  icon?: React.ReactNode;
+}) => {
+  return (
+    <label
+      className={`payment-option-item ${
+        isChecked && "payment-option-item-active"
+      } `}
+    >
+      <input
+        type="radio"
+        name={name}
+        checked={isChecked}
+        value={value}
+        onChange={(e) => setValue(e.target.value)}
+      />
+      <div className="flex items-center justify-between">
+      <div className="flex items-center">
+        <CircleCheck active={isChecked} />
+        <p className="payment-name-item">{title}</p>
+      </div>
+      {
+        message && <div>
+            <p className="payment-name-item-message">
+                {message}
+            </p>
+        </div>
+      }
+
+      </div>
+    </label>
   );
 };
 
@@ -30,60 +80,31 @@ export default function PaymentRadionOption() {
 
   return (
     <div className="flex flex-col gap-8 payment-methos-container">
-      <label
-        className={`payment-option-item ${
-          currenTpayment === "credit-card" && "payment-option-item-active"
-        } `}
-      >
-        <input
-          type="radio"
-          name="payment-option"
-          checked={currenTpayment === "credit-card"}
-          value={"credit-card"}
-          onChange={(e) => setCurrenTpayment(e.target.value)}
-        />
-        <div className="flex items-center">
-          <CircleCheck active={currenTpayment === "credit-card"} />
-          <p className="payment-name-item">Tarjeta Bancaria</p>
-        </div>
-      </label>
+      <CheckItem
+        title="Tarjeta de credito"
+        isChecked={currenTpayment === "credit-card"}
+        value={"credit-card"}
+        name={"payment-option"}
+        setValue={setCurrenTpayment}
+        message="Instántaneo"
+      />
 
-      <label
-        className={`payment-option-item ${
-          currenTpayment === "bizun" && "payment-option-item-active"
-        }`}
-      >
-        <input
-          type="radio"
-          name="payment-option"
-          checked={currenTpayment === "bizun"}
-          value={"bizun"}
-          onChange={(e) => setCurrenTpayment(e.target.value)}
-        />
-        <div className="flex items-center">
-          <CircleCheck active={ currenTpayment === "bizun" } />
-          <p className= "payment-name-item">Bizun</p>
-        </div>
-        
-      </label>
-      <label
-        className={`payment-option-item ${
-          currenTpayment === "transfer" && "payment-option-item-active"
-        }`}
-      >
-        <input
-          type="radio"
-          name="payment-option"
-          checked={currenTpayment === "transfer"}
-          value={"transfer"}
-          onChange={(e) => setCurrenTpayment(e.target.value)}
-        />
-        <div className="flex items-center">
-          <CircleCheck active={currenTpayment === "transfer"} />
-          <p className="payment-name-item">Transferencia</p>
-        </div>
-       
-      </label>
+      <CheckItem
+        title="Bizun"
+        isChecked={currenTpayment === "bizun"}
+        value={"bizun"}
+        name={"payment-option"}
+        setValue={setCurrenTpayment}
+        message="Importe mínimo 10€"
+      />
+      <CheckItem
+        title="Transferencia"
+        isChecked={currenTpayment === "transfer"}
+        value={"transfer"}
+        name={"payment-option"}
+        setValue={setCurrenTpayment}
+        message="No instántaneo"
+      />
     </div>
   );
 }
