@@ -3,13 +3,18 @@ import React, { useState } from "react";
 import "./payment-radio-option.scss";
 import Help from "../../icons/UI-icons/Help";
 import CheckItem from "./CheckItem";
+import { Select, Option } from "@material-tailwind/react";
 // import {C}
+
+const cardsBrand = ["Visa", "mastercar", "maestro","Sabadell"];
 
 export default function PaymentRadionOption() {
   const [currenTpayment, setCurrenTpayment] = useState<string>("bizun");
   const [creditcardState, setcreditcardState] = useState<
     "default" | "other" | string
   >("default");
+
+  const [creditcardBrand, setcreditcardBrand] = useState <string | undefined>("Sbadell")
 
   const creditCardNumber = "0909";
 
@@ -32,7 +37,7 @@ export default function PaymentRadionOption() {
           icon={<Help />}
         />
 
-        <div className="flex flex-col ml-4  gap-2 card-option-zone">
+        <div className="flex flex-col ml-4  gap-[8px] card-option-zone">
           <CheckItem
             title={`Tarjeta terminada en ${creditCardNumber}`}
             isChecked={creditcardState === "default"}
@@ -48,6 +53,18 @@ export default function PaymentRadionOption() {
             name="creditCardOption"
             value="other"
           />
+        </div>
+
+        <div className="w-full  custom-select-zone my-4">
+          <Select label="Elige TPV" className="custom-select" onChange={( val) =>{ setcreditcardBrand(val)}}> 
+            {cardsBrand.map((option, i) => {
+              return (
+                <Option key={i} value={option}>
+                  {option}
+                </Option>
+              );
+            })}
+          </Select>
         </div>
       </div>
 
