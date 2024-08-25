@@ -130,8 +130,8 @@ export default function RechargeBalanceForm() {
             Confianza Online.
           </p>
         </div>
-        <div className="w-full max-w-[200px]">
-          <button className="w-full text-center font-medium text-white bg-primary-default">Recargar Saldo</button>
+        <div className="w-full max-w-[220px]">
+          <button className="w-full text-center font-semibold font-montserrat text-white bg-primary-default rounded p-3 disabled:opacity-50 disabled:text-body-90" disabled={true}>Recargar Saldo</button>
         </div>
       </div>
     </form>
