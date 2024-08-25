@@ -7,11 +7,16 @@ import CheckItem from "./CheckItem";
 
 export default function PaymentRadionOption() {
   const [currenTpayment, setCurrenTpayment] = useState<string>("bizun");
+  const [creditcardState, setcreditcardState] = useState<
+    "default" | "other" | string
+  >("default");
+
+  const creditCardNumber = "0909";
 
   console.log("current state", currenTpayment);
 
   return (
-    <div className="flex flex-col gap-8 payment-methos-container">
+    <div className="flex flex-col gap-4 payment-methos-container">
       <div
         className={`w-full credit-card-zone ${
           currenTpayment === "credit-card" && "credit-card-zone-active"
@@ -26,6 +31,24 @@ export default function PaymentRadionOption() {
           message="Instántaneo"
           icon={<Help />}
         />
+
+        <div className="flex flex-col ml-4  gap-2 card-option-zone">
+          <CheckItem
+            title={`Tarjeta terminada en ${creditCardNumber}`}
+            isChecked={creditcardState === "default"}
+            setValue={setcreditcardState}
+            name="creditCardOption"
+            value="default"
+          />
+
+          <CheckItem
+            title={`Utilizar otra tarjeta`}
+            isChecked={creditcardState != "default"}
+            setValue={setcreditcardState}
+            name="creditCardOption"
+            value="other"
+          />
+        </div>
       </div>
 
       <CheckItem

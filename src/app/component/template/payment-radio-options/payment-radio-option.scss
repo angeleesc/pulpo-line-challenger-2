@@ -2,15 +2,23 @@
 
     .credit-card-zone {
 
-        @apply border border-white rounded-lg shadow-sm;
+        @apply border border-white rounded-lg shadow-sm bg-white px-4;
 
         .payment-option-item {
-            @apply border-none shadow-none;
+            @apply border-none shadow-none bg-transparent px-0;
         }
 
         &.credit-card-zone-active {
 
             @apply border-primary-default;
+        }
+
+        .card-option-zone {
+          @apply mt-4;
+
+            .payment-option-item {
+                @apply p-0 m-0;
+            }
         }
     }
 
