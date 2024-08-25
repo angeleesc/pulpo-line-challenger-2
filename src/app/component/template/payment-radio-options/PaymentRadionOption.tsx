@@ -56,7 +56,7 @@ export default function PaymentRadionOption() {
         </div>
 
         <div className="w-full  custom-select-zone my-4">
-          <Select label="Elige TPV" className="custom-select" onChange={( val) =>{ setcreditcardBrand(val)}}> 
+          <Select value={"Sabadell"} label="Elige TPV" className="custom-select" onChange={( val) =>{ setcreditcardBrand(val)}}> 
             {cardsBrand.map((option, i) => {
               return (
                 <Option key={i} value={option}>
@@ -89,3 +89,4 @@ export default function PaymentRadionOption() {
     </div>
   );
 }
+

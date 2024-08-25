@@ -1,5 +1,86 @@
 .payment-methos-container {
 
+    // "peer 
+    // w-full 
+    // h-full 
+    // bg-transparent 
+    // text-blue-gray-700 
+    // font-sans 
+    // font-normal 
+    // text-left 
+    // outline 
+    // outline-0 
+    // focus:outline-0 
+    // disabled:bg-blue-gray-50 
+    // disabled:border-0 
+    // disabled:cursor-not-allowed 
+    // transition-all 
+    // border-2 
+    // text-sm 
+    // px-3 
+    // py-2.5 
+    // rounded-[7px] 
+    // border-gray-900 
+    // border-t-transparent 
+    // custom-select"
+
+    // zona del labe
+
+    // flex 
+    // w-full 
+    // h-full 
+    // select-none 
+    // pointer-events-none 
+    // absolute 
+    // left-0
+    // font-normal 
+    // transition-all 
+    // -top-1.5 
+    // before:content[' '] 
+    // before:block before:box-border 
+    // before:w-2.5 
+    // before:h-1.5 
+    // before:mt-[6.5px] 
+    // before:mr-1 
+    // before:rounded-tl-md 
+    // before:pointer-events-none 
+    // before:transition-all 
+    // peer-disabled:before:border-transparent 
+    // after:content[' '] 
+    // after:block 
+    // after:flex-grow 
+    // after:box-border 
+    // after:w-2.5 
+    // after:h-1.5 
+    // after:mt-[6.5px] 
+    // after:ml-1 
+    // after:rounded-tr-md 
+    // after:pointer-events-none 
+    // after:transition-all 
+    // peer-disabled:after:border-transparent 
+    // text-[11px] 
+    // peer-disabled:text-transparent 
+    // before:border-t-2 
+    // before:border-l-2 
+    // after:border-t-2 
+    // after:border-r-2 
+    // leading-tight 
+    // text-gray-900 
+    // before:border-gray-900 
+    // after:border-gray-900
+
+
+    .custom-select-zone {
+        button {
+            @apply border border-body-100 border-t-transparent rounded;
+
+        }
+
+        label {
+            @apply before:border-t before:border-l after:border-t after:border-r before:border-body-100 after:border-body-100  before:rounded-tl after:rounded-tr text-body-100 font-montserrat font-medium;
+        }
+    }
+
     .credit-card-zone {
 
         @apply border border-white rounded-lg shadow-sm bg-white px-4;
@@ -14,7 +95,7 @@
         }
 
         .card-option-zone {
-          @apply mt-4;
+            @apply mt-4;
 
             .payment-option-item {
                 @apply p-0 m-0;
