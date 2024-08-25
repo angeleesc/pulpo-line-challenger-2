@@ -123,15 +123,15 @@ export default function RechargeBalanceForm() {
 
       <h6 className="text-base font-bold mt-5 mb-5">Metodo de pago </h6>
       <PaymentRadionOption />
-      <div className="flex">
+      <div className="flex mt-4">
         <div className="flex items-center">
           <p>
             Todos los pagos en Lotopía son 100% seguros. Web certificada por
             Confianza Online.
           </p>
         </div>
-        <div className="w-full max-w-[100px]">
-          <button className="">Recargar Saldo</button>
+        <div className="w-full max-w-[200px]">
+          <button className="w-full text-center font-medium text-white bg-primary-default">Recargar Saldo</button>
         </div>
       </div>
     </form>
