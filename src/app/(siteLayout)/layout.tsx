@@ -4,6 +4,7 @@ import Productab from "../component/tabs/pproduc-tab/Productab";
 import AsideMenu from "../component/aside-menu/AsideMenu";
 import Footer from "../component/footer/Footer";
 
+
 export default function SiteLayOut({
   children,
 }: {
