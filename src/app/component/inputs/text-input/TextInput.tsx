@@ -43,7 +43,6 @@ export default function TextInput({
             placeholder-shown:border-blue-gray-200
             placeholder-shown:border-t-blue-gray-200
             border
-            focus:border-2
             border-t-transparent
             focus:border-t-transparent
             text-sm
@@ -85,9 +84,9 @@ export default function TextInput({
         before:mr-1 
         peer-placeholder-shown:before:border-transparent 
         before:rounded-tl-md before:border-t 
-        peer-focus:before:border-t-2 
+        peer-focus:before:border-t
         before:border-l 
-        peer-focus:before:border-l-2 
+        peer-focus:before:border-l
         before:pointer-events-none 
         before:transition-all 
         peer-disabled:before:border-transparent 
@@ -99,8 +98,8 @@ export default function TextInput({
         after:ml-1 
         peer-placeholder-shown:after:border-transparent 
         after:rounded-tr-md 
-        after:border-t peer-focus:after:border-t-2 
-        after:border-r peer-focus:after:border-r-2 
+        after:border-t peer-focus:after:border-t
+        after:border-r peer-focus:after:border-r
         after:pointer-events-none after:transition-all 
         peer-disabled:after:border-transparent 
         peer-placeholder-shown:leading-[3.75] 
