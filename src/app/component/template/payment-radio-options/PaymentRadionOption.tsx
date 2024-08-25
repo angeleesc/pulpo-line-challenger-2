@@ -6,7 +6,7 @@ import CheckItem from "./CheckItem";
 import { Select, Option } from "@material-tailwind/react";
 // import {C}
 
-const cardsBrand = ["Visa", "mastercar", "maestro","Sabadell"];
+const cardsBrand = ["Visa", "mastercar", "maestro", "Sabadell"];
 
 export default function PaymentRadionOption() {
   const [currenTpayment, setCurrenTpayment] = useState<string>("bizun");
@@ -14,7 +14,9 @@ export default function PaymentRadionOption() {
     "default" | "other" | string
   >("default");
 
-  const [creditcardBrand, setcreditcardBrand] = useState <string | undefined>("Sbadell")
+  const [creditcardBrand, setcreditcardBrand] = useState<string | undefined>(
+    "Sbadell"
+  );
 
   const creditCardNumber = "0909";
 
@@ -44,6 +46,7 @@ export default function PaymentRadionOption() {
             setValue={setcreditcardState}
             name="creditCardOption"
             value="default"
+            disabled={currenTpayment !== "credit-card"}
           />
 
           <CheckItem
@@ -52,11 +55,20 @@ export default function PaymentRadionOption() {
             setValue={setcreditcardState}
             name="creditCardOption"
             value="other"
+            disabled={currenTpayment !== "credit-card"}
           />
         </div>
 
         <div className="w-full  custom-select-zone my-4">
-          <Select value={"Sabadell"} label="Elige TPV" className="custom-select" onChange={( val) =>{ setcreditcardBrand(val)}}> 
+          <Select
+            value={"Sabadell"}
+            label="Elige TPV"
+            className="custom-select"
+            onChange={(val) => {
+              setcreditcardBrand(val);
+            }}
+            disabled={creditcardState !== "other"}
+          >
             {cardsBrand.map((option, i) => {
               return (
                 <Option key={i} value={option}>
@@ -89,4 +101,3 @@ export default function PaymentRadionOption() {
     </div>
   );
 }
-

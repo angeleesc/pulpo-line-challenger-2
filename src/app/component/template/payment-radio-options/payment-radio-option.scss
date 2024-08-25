@@ -1,17 +1,28 @@
 .payment-methos-container {
 
- 
+
 
 
     .custom-select-zone {
         button {
-            @apply border border-body-100 border-t-transparent rounded;
+            @apply border border-body-100 border-t-transparent rounded disabled:border-t-body-100;
 
         }
 
         label {
-            @apply before:border-t before:border-l after:border-t after:border-r before:border-body-100 after:border-body-100  before:rounded-tl after:rounded-tr text-body-100 font-montserrat font-medium;
+            @apply before:border-t before:border-l after:border-t after:border-r before:border-body-100 after:border-body-100 before:rounded-tl after:rounded-tr text-body-100 font-montserrat font-medium;
         }
+    }
+
+    .icon-zone {
+
+        stroke: theme("colors.info.default");
+
+        path {
+            stroke: theme("colors.info.default");
+        }
+
+
     }
 
     .credit-card-zone {

@@ -30,6 +30,7 @@ const CheckItem = ({
     title,
     message,
     icon,
+    disabled=false
   }: {
     value: string;
     isChecked: boolean;
@@ -38,6 +39,7 @@ const CheckItem = ({
     title: string;
     message?: string;
     icon?: React.ReactNode;
+    disabled?: boolean
   }) => {
     return (
       <label
@@ -51,12 +53,13 @@ const CheckItem = ({
           checked={isChecked}
           value={value}
           onChange={(e) => setValue(e.target.value)}
+          disabled={disabled}
         />
-        <div className="w-full flex items-center justify-between">
+        <div className={`w-full flex items-center justify-between ${disabled && "opacity-50"}`}>
           <div className="flex items-center">
             <CircleCheck active={isChecked} />
             <p className="payment-name-item">{title}</p>
-            {icon && icon}
+            {icon && <span className="icon-zone">{icon}</span> }
           </div>
           {message && (
             <div>
