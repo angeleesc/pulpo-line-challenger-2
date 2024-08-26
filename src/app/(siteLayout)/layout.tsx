@@ -4,6 +4,7 @@ import Productab from "../component/tabs/pproduc-tab/Productab";
 import AsideMenu from "../component/aside-menu/AsideMenu";
 import Footer from "../component/footer/Footer";
 import MobileNavBar from "../component/Navbar/MobileNavBar";
+import FooterNavbar from "../component/Navbar/FooterNavbar";
 
 export default function SiteLayOut({
   children,
@@ -34,6 +35,9 @@ export default function SiteLayOut({
         </div>
       </div>
       <Footer />
+      <footer className="w-full lg:hidden fixed bottom-0">
+        <FooterNavbar />
+      </footer>
     </>
   );
 }
