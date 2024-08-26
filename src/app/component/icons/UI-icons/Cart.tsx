@@ -1,12 +1,13 @@
 import React from "react";
 
-export default function Cart() {
+export default function Cart({w="16",h="16"}) {
   return (
     <svg
     xmlns="http://www.w3.org/2000/svg"
-    width="16"
-    height="16"
+    width={w}
+    height={h}
     fill="none"
+  
     viewBox="0 0 16 16"
   >
     <path
