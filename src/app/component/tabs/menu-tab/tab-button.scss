@@ -1,5 +1,6 @@
 .tab-button {
-@apply text-[1rem] font-montserrat font-medium leading-6 py-3 px-4 border-b-[2px]  border-b-transparent text-center transition-colors outline-none ;
+@apply text-[1rem] font-montserrat font-medium leading-6 flex-grow lg:flex-grow-0 py-3 lg:px-4 border-b-[2px]  border-b-transparent text-center transition-colors outline-none ;
+@apply right-0; 
 
     &.tab-button-active{
         @apply border-b-primary-pressed

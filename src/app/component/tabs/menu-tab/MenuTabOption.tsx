@@ -15,7 +15,7 @@ export default function MenuTabOption({
   setOption,
 }: MenuTabOptionPropsType) {
   return (
-    <div>
+    <div className="w-full  flex justify-between lg:justify-start fixed top-[60px] left-0  lg:static">
       {options.map((option, i) => {
         return (
           <button

@@ -23,7 +23,7 @@ export default function Home() {
     <main className="p-8">
       <div className="w-full " >
         <div className="">
-          <h3 className="font-bold text-[25px] leading-9  mt-8 mb-6">
+          <h3 className="font-bold text-[25px] leading-9  mb-6">
             Gestion De Saldo
           </h3>
           <MenuTabOption
