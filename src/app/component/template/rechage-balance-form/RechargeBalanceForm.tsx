@@ -4,6 +4,7 @@ import TextInput from "../../inputs/text-input/TextInput";
 import { OptionsTabsType } from "@/types/tabOptions";
 import ButtonGroupButton from "../../inputs/button-group-input/ButtonGroupButton";
 import PaymentRadionOption from "../payment-radio-options/PaymentRadionOption";
+import { useRouter } from "next/router";
 
 const moneyValuesOptions: OptionsTabsType[] = [
   {
@@ -42,6 +43,9 @@ export interface PaymentData {
 export default function RechargeBalanceForm() {
   const [balanceState, setBalanceState] = useState<string>("");
   const [isAllDataok, setIsAllDataok] = useState<boolean>(false);
+
+  // const router = useRouter();
+
 
   const [paymentDataState, setPaymentDataState] = useState<PaymentData>({
     amount: "",
@@ -96,6 +100,7 @@ export default function RechargeBalanceForm() {
         rechargePbalecne();
 
         console.log("enviado");
+        // router.push("/recharge-succes")
       }}
     >
       <div className="m-auto text-center">
@@ -126,14 +131,14 @@ export default function RechargeBalanceForm() {
 
       <h6 className="text-base font-bold mt-5 mb-5">Metodo de pago </h6>
       <PaymentRadionOption updateData={updatedPaymentData} />
-      <div className="flex mt-4">
-        <div className="flex items-center">
+      <div className=" mb-16 lg:flex mt-4">
+        <div className="flex items-center ">
           <p>
             Todos los pagos en Lotopía son 100% seguros. Web certificada por
             Confianza Online.
           </p>
         </div>
-        <div className="w-full max-w-[220px]">
+        <div className="w-full   lg:max-w-[220px] ">
           <button
             className="w-full text-center font-semibold font-montserrat text-white bg-primary-default rounded p-3 disabled:opacity-50 disabled:text-body-90"
             disabled={!isAllDataok}
